@@ -1,0 +1,54 @@
+:root{
+  --bg:#0f1724;
+  --card:#0b1220;
+  --muted:#9aa4b2;
+  --accent:#1fb6ff;
+  --glass: rgba(255,255,255,0.03);
+  --radius:12px;
+  --max-width:1100px;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background:linear-gradient(180deg,#061024 0%, #07162a 100%);
+  color:#e6eef6;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+.container{
+  max-width:var(--max-width);
+  margin:0 auto;
+  padding:24px;
+}
+.site-header{
+  padding:28px 0 0;
+}
+.site-header h1{
+  margin:0 0 6px;
+  font-weight:700;
+  letter-spacing:0.2px;
+}
+.tagline{color:var(--muted);margin:0 0 18px}
+.controls{background:var(--glass);padding:12px;border-radius:10px;margin-bottom:18px;border:1px solid rgba(255,255,255,0.03)}
+.control-row{display:flex;gap:12px;flex-wrap:wrap}
+.control{display:flex;flex-direction:column;font-size:14px;color:var(--muted)}
+.control input, .control select{margin-top:6px;padding:8px 10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit}
+.meta-row{margin-top:10px;display:flex;justify-content:space-between;align-items:center}
+#count{color:var(--muted);font-size:13px}
+.cards-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px}
+.card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:14px;border-radius:12px;border:1px solid rgba(255,255,255,0.03);display:flex;gap:12px;align-items:center}
+.avatar{width:64px;height:64px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:18px;color:#081024;flex-shrink:0}
+.info{flex:1}
+.name{font-weight:600;margin:0}
+.meta{display:flex;gap:8px;align-items:center;margin-top:6px}
+.badge{padding:6px 8px;border-radius:999px;background:rgba(255,255,255,0.03);font-size:13px;color:var(--muted)}
+.price{margin-left:auto;font-weight:700}
+.rating{display:flex;align-items:center;gap:6px}
+.rating .score{font-weight:700}
+.note{color:var(--muted);margin-top:20px;font-size:13px}
+@media (max-width:520px){
+  .control-row{flex-direction:column}
+  .avatar{width:56px;height:56px}
+}
